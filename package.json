@@ -1,0 +1,32 @@
+{
+  "name": "tournament-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build:server": "npm run build --workspace=apps/server",
+    "build:web": "npm run build --workspace=apps/web",
+    "start:server": "npm run start:prod --workspace=apps/server",
+    "start:web": "npm run start --workspace=apps/web",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielrangel/tournament-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielrangel/tournament-manager/issues"
+  },
+  "homepage": "https://github.com/gabrielrangel/tournament-manager#readme",
+  "workspaces": [
+    "apps/server",
+    "apps/web"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
