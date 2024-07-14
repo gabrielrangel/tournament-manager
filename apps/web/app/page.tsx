@@ -1,6 +1,19 @@
-import { trpc } from "@web/app/trpc";
+import ECommerce from "@web/components/Dashboard/E-commerce";
+import { Metadata } from "next";
+import DefaultLayout from "@web/components/Layouts/DefaultLayout";
 
-export default async function Home() {
-  const { greeting } = await trpc.hello.query({ name: `Tom` });
-  return <div>{greeting}</div>;
+export const metadata: Metadata = {
+  title:
+    "Next.js E-commerce Dashboard | TailAdmin - Next.js Dashboard Template",
+  description: "This is Next.js Home for TailAdmin Dashboard Template",
+};
+
+export default function Home() {
+  return (
+    <>
+      <DefaultLayout>
+        <ECommerce />
+      </DefaultLayout>
+    </>
+  );
 }
